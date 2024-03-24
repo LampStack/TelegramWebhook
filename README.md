@@ -5,7 +5,7 @@ It simplifies the process by providing a user-friendly interface to configure va
 
 ## Preview
 
-![Website Preview](preview.png)
+![Website Preview](src/preview.png)
 
 ## Technologies Used
 
