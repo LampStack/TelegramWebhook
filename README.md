@@ -1,6 +1,7 @@
 # Telegram Bot Webhook Tool Website
 
-This README.md page describes the website designed for a webhook tool for Telegram bots.
+This website is a tool for setting up webhooks for Telegram bots.<p>
+It simplifies the process by providing a user-friendly interface to configure various parameters required for webhook integration.
 
 ## Preview
 
