@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Telegram Webhook Tools</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <style>
+        @font-face {
+            font-family: 'CustomFont';
+            src: url('./src/font.woff2') format('woff2');
+        }
+        body {
+            font-family: 'CustomFont', sans-serif;
+        }
+    </style>
+</head>
+
+<body class="bg-white text-black p-12">
+    <header class="text-center mb-8">
+        <h1 class="text-3xl font-bold">Telegram Webhook Tools</h1>
+    </header>
+    <div class="max-w-lg mx-auto">
+        <div class="mb-2">
+            <label for="token" class="block mb-1">Token <span style="color: red; margin-left: 5px;">*</span></label>
+            <input type="text" id="token" name="token" class="w-full border rounded-md px-3 py-2">
+        </div><p>
+        <div class="mb-2">
+            <label for="url" class="block mb-1">URL <span style="color: red; margin-left: 5px;">*</span></label>
+            <input type="text" id="url" name="url" class="w-full border rounded-md px-3 py-2">
+        </div><p>
+        <div class="mb-2">
+            <label for="ip_address" class="block mb-1">IP Address</label>
+            <input type="text" id="ip_address" name="ip_address" class="w-full border rounded-md px-3 py-2">
+        </div><p>
+        <div class="mb-2">
+            <label for="max_connections" class="block mb-1">Max Connections</label>
+            <input type="number" id="max_connections" name="max_connections" value="40" class="w-full border rounded-md px-3 py-2">
+        </div><p>
+        <div class="mb-2">
+            <label class="inline-flex items-center">
+                <input type="checkbox" class="form-checkbox" name="drop_pending_updates">
+                <span class="ml-2">Drop pending updates</span>
+            </label>
+        </div><p>
+        <div class="mb-2">
+            <label for="allowed_updates" class="block mb-1">Allowed Updates</label>
+            <select id="allowed_updates" name="allowed_updates" multiple class="w-full border rounded-md px-3 py-2">
+                <option value="update_id">update_id</option>
+                <option value="message">message</option>
+                <option value="edited_message">edited_message</option>
+                <option value="channel_post">channel_post</option>
+                <option value="edited_channel_post">edited_channel_post</option>
+                <option value="message_reaction">message_reaction</option>
+                <option value="message_reaction_count">message_reaction_count</option>
+                <option value="inline_query">inline_query</option>
+                <option value="chosen_inline_result">chosen_inline_result</option>
+                <option value="callback_query">callback_query</option>
+                <option value="shipping_query">shipping_query</option>
+                <option value="pre_checkout_query">pre_checkout_query</option>
+                <option value="poll">poll</option>
+                <option value="poll_answer">poll_answer</option>
+                <option value="my_chat_member">my_chat_member</option>
+                <option value="chat_member">chat_member</option>
+                <option value="chat_join_request">chat_join_request</option>
+                <option value="chat_boost">chat_boost</option>
+                <option value="removed_chat_boost">removed_chat_boost</option>
+            </select>
+        </div>
+        <div class="flex justify-center">
+            <button type="button" id="submitButton" class="text-gray-900 hover:text-white border border-gray-800 hover:bg-gray-900 focus:ring-4 focus:outline-none focus:ring-gray-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2 dark:border-gray-600 dark:text-gray-400 dark:hover:text-white dark:hover:bg-gray-600 dark:focus:ring-gray-800">
+                Set Webhook
+            </button>
+        </div>
+    </div>
+
+    <script src="./js/main.js"></script>
+
+</body>
+</html>
