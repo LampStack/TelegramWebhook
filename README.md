@@ -2,6 +2,10 @@
 
 This README.md page describes the website designed for a webhook tool for Telegram bots.
 
+## Preview
+
+![Website Preview](preview.png)
+
 ## Technologies Used
 
 - This website utilizes:
